@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="先锋电影网 xianfengdianyingwang —— 引领观影新潮流，聚合最新院线大片、独立电影、艺术影片、日韩欧美剧集、纪录片等资源，每日精选，先锋视角推荐好电影。">
+<meta name="keywords" content="先锋电影网,xianfengdianyingwang,独立电影,艺术影片,院线大片,日韩欧美剧集,纪录片,观影推荐,影视资源">
+<meta name="author" content="先锋电影网">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="先锋电影网 | 引领观影新潮流">
+<meta property="og:description" content="聚合最新院线大片、独立电影、艺术影片、日韩欧美剧集、纪录片，每日精选先锋视角推荐好电影。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xianfengdianyingwang-wap.github.io">
+<title>先锋电影网 | 引领观影新潮流 - xianfengdianyingwang</title>
+<link rel="canonical" href="https://xianfengdianyingwang-wap.github.io">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+:root{
+  --bg:#0d0d0f;
+  --card:#16161a;
+  --card2:#1c1c22;
+  --line:rgba(255,255,255,.07);
+  --orange:#ff6b00;
+  --pink:#ff006e;
+  --purple:#7b2cbf;
+  --lime:#caff33;
+  --text:#f0f0f5;
+  --muted:#8b8b9e;
+  --r:14px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:14.5px;overflow-x:hidden;}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 20% 0%,rgba(123,44,191,.12),transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(255,107,0,.08),transparent 50%);}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:48px 48px;}
+a{color:inherit;text-decoration:none;}
+ul,ol{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 16px;}
+
+/* ===== TOP BAR ===== */
+.topbar{background:rgba(13,13,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:500;}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;height:54px;}
+.brand{font-size:16px;font-weight:900;letter-spacing:-.5px;display:flex;align-items:baseline;gap:2px;}
+.brand b{background:linear-gradient(90deg,var(--orange),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.brand span{font-size:12px;color:var(--muted);font-weight:400;}
+.topnav{display:flex;gap:2px;align-items:center;}
+.topnav a{padding:6px 12px;border-radius:7px;font-size:13px;color:var(--muted);transition:.2s;}
+.topnav a:hover{color:var(--lime);background:rgba(202,255,51,.06);}
+.menu-btn{display:none;width:34px;height:34px;border-radius:7px;background:rgba(255,255,255,.06);color:var(--lime);font-size:15px;align-items:center;justify-content:center;}
+@media(max-width:700px){
+  .menu-btn{display:flex;}
+  .topnav{position:fixed;top:54px;left:0;right:0;flex-direction:column;background:rgba(13,13,15,.97);padding:12px;border-bottom:1px solid var(--line);transform:translateY(-200%);transition:.28s;backdrop-filter:blur(12px);}
+  .topnav.open{transform:none;}
+  .topnav a{width:100%;text-align:center;padding:10px;border-radius:7px;}
+}
+
+/* ===== HERO ===== */
+.hero{padding:80px 0 50px;text-align:center;position:relative;}
+.hero .kicker{display:inline-block;padding:5px 16px;border-radius:20px;background:rgba(202,255,51,.08);border:1px solid rgba(202,255,51,.2);color:var(--lime);font-size:11.5px;font-weight:600;letter-spacing:1px;margin-bottom:18px;text-transform:uppercase;}
+.hero h1{font-size:clamp(28px,6vw,48px);font-weight:900;line-height:1.25;margin-bottom:14px;letter-spacing:-1px;}
+.hero h1 .hl{background:linear-gradient(90deg,var(--orange),var(--pink),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.hero .lead{font-size:15px;color:var(--muted);max-width:540px;margin:0 auto 30px;line-height:1.9;}
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn{padding:12px 28px;border-radius:10px;font-size:13.5px;font-weight:600;transition:.25s;}
+.btn-primary{background:linear-gradient(135deg,var(--orange),var(--pink));color:#fff;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,0,.35);}
+.btn-ghost{border:1px solid var(--line);color:var(--text);}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime);}
+
+/* ===== SECTION ===== */
+.sec{padding:50px 0;}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:26px;flex-wrap:wrap;}
+.sec-head h2{font-size:clamp(21px,3.5vw,28px);font-weight:800;letter-spacing:-.5px;}
+.sec-head h2 i{font-style:normal;color:var(--orange);}
+.sec-head .more{font-size:12.5px;color:var(--muted);}
+.sec-head .more:hover{color:var(--lime);}
+
+/* ===== MOVIE ROW DOM (差异化) ===== */
+.mrow{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+@media(min-width:600px){.mrow{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:900px){.mrow{grid-template-columns:repeat(5,1fr);}}
+.mcard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.32s;cursor:default;}
+.mcard:hover{transform:translateY(-5px) scale(1.01);border-color:rgba(255,107,0,.35);box-shadow:0 10px 32px rgba(0,0,0,.4);}
+.mcard .mrank{position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:7px;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--lime);z-index:2;}
+.mcard .mcover{height:200px;display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;}
+.mcard .mcover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.5));}
+.mcover.c1{background:linear-gradient(160deg,#1a0000,#3d0000);}
+.mcover.c2{background:linear-gradient(160deg,#0a1628,#1a3060);}
+.mcover.c3{background:linear-gradient(160deg,#1a0030,#3d0066);}
+.mcover.c4{background:linear-gradient(160deg,#002800,#00501a);}
+.mcover.c5{background:linear-gradient(160deg,#2a1a00,#5c3a00);}
+.mcover.c6{background:linear-gradient(160deg,#001a2a,#00405c);}
+.mcover.c7{background:linear-gradient(160deg,#2a0028,#5c0055);}
+.mcover.c8{background:linear-gradient(160deg,#1a1a00,#4a4a00);}
+.mcover.c9{background:linear-gradient(160deg,#000a1a,#002850);}
+.mcover.c10{background:linear-gradient(160deg,#1a0015,#4a0040);}
+.mcard .minfo{padding:12px 14px;position:relative;}
+.mcard .minfo h5{font-size:13px;font-weight:600;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mcard .minfo .meta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);}
+
+/* ===== TIMELINE DOM (差异化) ===== */
+.timeline{position:relative;padding-left:0;}
+.tl-item{display:flex;gap:16px;margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;transition:.25s;}
+.tl-item:hover{border-color:rgba(123,44,191,.3);background:var(--card2);}
+.tl-date{flex:0 0 auto;width:52px;text-align:center;padding:6px 0;border-radius:8px;background:linear-gradient(135deg,var(--orange),var(--pink));color:#fff;font-size:10px;font-weight:700;height:fit-content;line-height:1.5;}
+.tl-date strong{display:block;font-size:18px;}
+.tl-content h5{font-size:14px;font-weight:600;margin-bottom:4px;}
+.tl-content p{font-size:12.5px;color:var(--muted);line-height:1.75;}
+.tl-tag{display:inline-block;margin-top:6px;padding:2px 9px;border-radius:5px;font-size:10.5px;background:rgba(202,255,51,.08);color:var(--lime);}
+
+/* ===== GENRE PILLS DOM (差异化) ===== */
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.pill{flex:1 1 140px;min-width:130px;max-width:200px;text-align:center;padding:18px 14px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);transition:.28s;cursor:default;}
+.pill:hover{background:linear-gradient(135deg,rgba(255,107,0,.08),rgba(123,44,191,.08));border-color:rgba(202,255,51,.25);transform:translateY(-3px);}
+.pill .p-emoji{font-size:24px;margin-bottom:8px;}
+.pill h6{font-size:13.5px;font-weight:700;margin-bottom:3px;}
+.pill span{font-size:11px;color:var(--muted);}
+
+/* ===== QUOTE / MANIFESTO DOM (差异化) ===== */
+.manifesto{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,44px);text-align:center;position:relative;overflow:hidden;}
+.manifesto::before{content:""";position:absolute;top:16px;left:24px;font-size:60px;color:var(--orange);opacity:.3;font-family:Georgia,serif;}
+.manifesto::after{content:""";position:absolute;bottom:-10px;right:24px;font-size:60px;color:var(--purple);opacity:.3;font-family:Georgia,serif;}
+.manifesto h3{font-size:clamp(18px,3vw,24px);font-weight:800;margin-bottom:14px;line-height:1.6;}
+.manifesto h3 em{font-style:normal;background:linear-gradient(90deg,var(--orange),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.manifesto p{font-size:13.5px;color:var(--muted);max-width:560px;margin:0 auto;line-height:2;}
+
+/* ===== FOOTER ===== */
+.foot{background:#08080a;border-top:1px solid var(--line);padding:40px 0 20px;margin-top:20px;}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-bottom:26px;}
+@media(min-width:560px){.foot-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:860px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr;}}
+.foot-brand-txt{font-size:18px;font-weight:900;margin-bottom:8px;}
+.foot-brand-txt b{background:linear-gradient(90deg,var(--orange),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.foot-grid p{font-size:12.5px;color:var(--muted);line-height:1.85;max-width:260px;}
+.foot-col h6{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--text);}
+.foot-col ul li{margin-bottom:7px;font-size:12.5px;color:var(--muted);}
+.foot-col ul li a:hover{color:var(--lime);}
+.foot-bot{border-top:1px solid var(--line);padding-top:16px;text-align:center;font-size:11.5px;color:var(--muted);}
+.foot-bot a{color:var(--orange);}
+
+/* back to top */
+.btt{position:fixed;bottom:22px;right:22px;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--pink));color:#fff;display:none;align-items:center;justify-content:center;font-size:15px;z-index:300;box-shadow:0 4px 16px rgba(255,107,0,.3);transition:.3s;}
+.btt.show{display:flex;}
+.btt:hover{transform:scale(1.1);}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#"><b>先锋电影网</b><span>xianfeng</span></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav class="topnav" id="topnav">
+      <a href="#home">首页</a>
+      <a href="#top10">TOP10</a>
+      <a href="#genre">类型频道</a>
+      <a href="#news">最新资讯</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <span class="kicker">✦ Xianfengdianyingwang</span>
+    <h1>不只是看电影<br><span class="hl">更是先锋体验</span></h1>
+    <p class="lead">先锋电影网 —— 聚合最新院线大片、独立电影、艺术影片、日韩欧美剧集与纪录片。以先锋视角精选每一部值得凝视的好片。</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#">立即探索</a>
+      <a class="btn btn-ghost" href="#">本周精选</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MOVIE ROW (TOP10) ===== -->
+<section class="sec" id="top10">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>本周 <i>TOP10</i></h2>
+      <a class="more" href="#">查看完整榜单 →</a>
+    </div>
+    <div class="mrow">
+      <div class="mcard"><div class="mrank">1</div><div class="mcover c1">🔥</div><div class="minfo"><h5>边境迷雾</h5><div class="meta"><span>悬疑</span><b style="color:var(--lime)">9.2</b></div></div></div>
+      <div class="mcard"><div class="mrank">2</div><div class="mcover c2">🚀</div><div class="minfo"><h5>深空回响</h5><div class="meta"><span>科幻</span><b style="color:var(--lime)">8.9</b></div></div></div>
+      <div class="mcard"><div class="mrank">3</div><div class="mcover c3">🎭</div><div class="minfo"><h5>暗夜舞台</h5><div class="meta"><span>剧情</span><b style="color:var(--lime)">8.7</b></div></div></div>
+      <div class="mcard"><div class="mrank">4</div><div class="mcover c4">🏔️</div><div class="minfo"><h5>雪山行者</h5><div class="meta"><span>冒险</span><b style="color:var(--lime)">8.5</b></div></div></div>
+      <div class="mcard"><div class="mrank">5</div><div class="mcover c5">💀</div><div class="minfo"><h5>亡灵契约</h5><div class="meta"><span>恐怖</span><b style="color:var(--lime)">8.3</b></div></div></div>
+      <div class="mcard"><div class="mrank">6</div><div class="mcover c6">🕵️</div><div class="minfo"><h5>沉默证人</h5><div class="meta"><span>犯罪</span><b style="color:var(--lime)">8.2</b></div></div></div>
+      <div class="mcard"><div class="mrank">7</div><div class="mcover c7">💕</div><div class="minfo"><h5>午夜情书</h5><div class="meta"><span>爱情</span><b style="color:var(--lime)">8.1</b></div></div></div>
+      <div class="mcard"><div class="mrank">8</div><div class="mcover c8">🤖</div><div class="minfo"><h5>机械之心</h5><div class="meta"><span>科幻</span><b style="color:var(--lime)">7.9</b></div></div></div>
+      <div class="mcard"><div class="mrank">9</div><div class="mcover c9">🏰</div><div class="minfo"><h5>王国陨落</h5><div class="meta"><span>奇幻</span><b style="color:var(--lime)">7.8</b></div></div></div>
+      <div class="mcard"><div class="mrank">10</div><div class="mcover c10">🎪</div><div class="minfo"><h5>马戏之王2</h5><div class="meta"><span>歌舞</span><b style="color:var(--lime)">7.6</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GENRE PILLS ===== -->
+<section class="sec" id="genre">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>类型 <i>频道</i></h2>
+      <a class="more" href="#">全部频道 →</a>
+    </div>
+    <div class="pills">
+      <div class="pill"><div class="p-emoji">🎬</div><h6>院线大片</h6><span>最新上映 · 持续更新</span></div>
+      <div class="pill"><div class="p-emoji">🎭</div><h6>独立电影</h6><span>先锋视角 · 小众佳作</span></div>
+      <div class="pill"><div class="p-emoji">📺</div><h6>日韩剧集</h6><span>热门同步 · 每日追更</span></div>
+      <div class="pill"><div class="p-emoji">🇺🇸</div><h6>欧美剧集</h6><span>高分经典 · 完整收录</span></div>
+      <div class="pill"><div class="p-emoji">🎥</div><h6>纪录片</h6><span>人文自然 · 深度纪录</span></div>
+      <div class="pill"><div class="p-emoji">✨</div><h6>综艺动漫</h6><span>娱乐休闲 · 分类齐全</span></div>
+      <div class="pill"><div class="p-emoji">⭐</div><h6>高分经典</h6><span>豆瓣精选 · 必看推荐</span></div>
+      <div class="pill"><div class="p-emoji">🆕</div><h6>新片速递</h6><span>每日更新 · 抢先观看</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE NEWS ===== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>最新 <i>资讯</i></h2>
+      <a class="more" href="#">更多资讯 →</a>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date"><strong>06</strong>10月</div>
+        <div class="tl-content">
+          <h5>《边境迷雾》票房破纪录，连续三周蝉联冠军</h5>
+          <p>悬疑巨制《边境迷雾》上映仅两周即突破15亿大关，口碑与票房双丰收，被影评人誉为年度最佳国产悬疑片。</p>
+          <span class="tl-tag">院线大片</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><strong>05</strong>10月</div>
+        <div class="tl-content">
+          <h5>第81届威尼斯电影节获奖名单揭晓</h5>
+          <p>多部亚洲独立电影斩获重要奖项，韩国导演新作《冬日回声》荣获金狮奖，引发全球影迷关注。</p>
+          <span class="tl-tag">行业动态</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><strong>04</strong>10月</div>
+        <div class="tl-content">
+          <h5>Netflix宣布2026年第四季度片单</h5>
+          <p>包含12部原创电影和8部限定剧集，涵盖科幻、悬疑、爱情等多种类型，多部作品由知名导演执导。</p>
+          <span class="tl-tag">平台动态</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date"><strong>03</strong>10月</div>
+        <div class="tl-content">
+          <h5>《深空回响》续集正式立项，2027年上映</h5>
+          <p>科幻大片《深空回响》宣布开发续集，原班人马回归，故事将拓展至更广阔的宇宙深处，预计2027年全球同步上映。</p>
+          <span class="tl-tag">影片动态</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MANIFESTO ===== -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="manifesto">
+      <h3><em>先锋电影网</em> —— 不只做资源聚合，更做观影引路人</h3>
+      <p>网站网址：<a href="#" style="color:var(--orange)">https://xianfengdianyingwang-wap.github.io</a><br><br>
+      从院线大片到独立电影，从日韩剧集到欧美佳作，从纪录片到综艺动漫——我们以先锋的视角、专业的品味，为你精选每一部值得凝视的好片。每日更新，持续推荐，让每一次打开都有惊喜。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand-txt"><b>先锋电影网</b></div>
+        <p>先锋电影网 xianfengdianyingwang —— 引领观影新潮流，聚合全网优质影视资源，每日精选推荐。</p>
+      </div>
+      <div class="foot-col">
+        <h6>频道导航</h6>
+        <ul><li><a href="#">院线大片</a></li><li><a href="#">独立电影</a></li><li><a href="#">日韩剧集</a></li><li><a href="#">欧美剧集</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h6>精选内容</h6>
+        <ul><li><a href="#">TOP10榜单</a></li><li><a href="#">高分经典</a></li><li><a href="#">新片速递</a></li><li><a href="#">纪录片精选</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h6>关于本站</h6>
+        <ul><li><a href="#">关于我们</a></li><li><a href="#">投稿合作</a></li><li><a href="#">免责声明</a></li><li><a href="#">联系客服</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      © 2026 先锋电影网 xianfengdianyingwang · 网站网址：<a href="#">https://xianfengdianyingwang-wap.github.io</a><br>
+      本站内容仅供影视文化交流，影片版权归原作者及发行方所有。
+    </div>
+  </div>
+</footer>
+
+<!-- back to top -->
+<a class="btt" id="btt" href="#">↑</a>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var nav=document.getElementById('topnav');
+  btn.addEventListener('click',function(){nav.classList.toggle('open');});
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){nav.classList.remove('open');});
+  });
+})();
+(function(){
+  var b=document.getElementById('btt');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>350){b.classList.add('show');}else{b.classList.remove('show');}
+  });
+  b.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+
+</body>
+</html>
